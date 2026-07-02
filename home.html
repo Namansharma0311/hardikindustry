@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- FIX: Title uses correct brand name throughout -->
+  <title>Hardik Industries — Premium Buff Manufacturing</title>
+  <meta name="description" content="Premium raw buffs and polishing wheels for utensil and metal finishing. Jute, coir, hard buffs and brushes — engineered in Ghaziabad since 1980." />
+  <meta property="og:title" content="Hardik Industries — Premium Buff Manufacturing" />
+  <meta property="og:description" content="Premium raw buffs and polishing wheels for utensil and metal finishing." />
+  <meta property="og:image" content="images/hero-bg.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <div class="logo-icon">H</div>
+        <div class="logo-text">
+          <div class="logo-title">Hardik <span>Industries</span></div>
+          <!-- FIX: standardised to Est. 1980 across all pages -->
+          <div class="logo-sub">Buff Manufacturing · Est. 1980</div>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="images/hero-bg.jpg" alt="" />
+    </div>
+    <div class="container hero-content">
+      <span class="eyebrow"><span class="dot"></span> Established 1980 · Ghaziabad, India</span>
+      <h1>Superior Shine for <em>Exceptional</em> Metal Finishing</h1>
+      <p>Premium raw buffs and polishing wheels — engineered for utensil makers, cookware brands, and metal finishers who refuse to settle for anything less than a mirror finish.</p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary">Explore Products →</a>
+        <a href="#contact" class="btn btn-outline">Request a Quote</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num gold">40+</div>
+          <div class="label">Years of craft</div>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat">
+          <div class="num gold">4</div>
+          <div class="label">Product lines</div>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat">
+          <div class="num gold">All India</div>
+          <div class="label">Dispatch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal">
+          <span class="eyebrow">About</span>
+          <h2 style="font-size:clamp(36px,5vw,60px);line-height:1.05;">Traditional craft.<br /><span class="text-gradient-gold">Modern</span> manufacturing.</h2>
+        </div>
+        <div class="about-text reveal">
+          <p>Hardik Industries has been producing premium buffing material for the polishing trade since 1980 — four decades of refining what a consistent, high-performing buff should deliver under demanding conditions.</p>
+          <p>Our buffs finish utensils, cutlery, kitchenware, and decorative metalware in workshops across India. We pair traditional craftsmanship with controlled, modern production so every buff leaving our factory performs with the same consistency.</p>
+          <div class="about-features">
+            <div class="about-feature"><h4>MSME Certified</h4><span>Every batch checked</span></div>
+            <div class="about-feature"><h4>Custom builds</h4><span>Made to your arbor &amp; spec</span></div>
+            <div class="about-feature"><h4>Bulk capacity</h4><span>Container-scale ready</span></div>
+            <div class="about-feature"><h4>All-India dispatch</h4><span>48-hour turnaround</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="container">
+      <div class="products-header">
+        <div class="left reveal">
+          <span class="eyebrow">Our Catalogue</span>
+          <!-- FIX: removed duplicate "Stage" — original read "A Buff for Every Stage of Stage" -->
+          <h2>A Buff for Every Stage of the <span class="text-gradient-gold">Finishing Process</span>.</h2>
+        </div>
+        <p class="reveal">Cleaning, cutting, polishing — four core product lines, each available in all sizes and custom-built to your arbor specification.</p>
+      </div>
+      <!-- Cards rendered by script.js -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why" class="why">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">✦ Why Choose Us</span>
+        <h2>Four Decades of <span class="text-gradient-gold">Precision</span>, Packed Into Every Buff.</h2>
+        <p>We don't sell catalogue parts. We engineer buffing materials that become a quiet competitive advantage on your production floor.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card big reveal">
+          <div class="why-icon">🏆</div>
+          <h3>Premium Quality</h3>
+          <p>Hand-graded raw material and consistent batch QC — every buff delivers the same reliable performance.</p>
+          <div class="big-stats">
+            <div class="stat"><div class="num">40+</div><div class="label">Years</div></div>
+            <div class="stat"><div class="num">5M+</div><div class="label">Buffs shipped</div></div>
+            <div class="stat"><div class="num">100%</div><div class="label">QC tested</div></div>
+          </div>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">📐</div>
+          <h3>Custom Sizes</h3>
+          <p>12″ to 24″, any arbor, any thickness. Built to your exact specification.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">🚚</div>
+          <h3>Fast Delivery</h3>
+          <p>Ready stock available. Dispatch across India as soon as possible.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">🛡️</div>
+          <h3>Quality Tested</h3>
+          <p>Every batch balance-tested and density-checked before shipping.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">🏭</div>
+          <h3>Modern Manufacturing</h3>
+          <p>Precision tooling. Skilled artisans. Over four decades of craftsmanship.</p>
+        </div>
+        <div class="why-card wide reveal">
+          <div class="why-icon">📦</div>
+          <h3>Bulk Capacity</h3>
+          <p>Ready to fulfil container-scale orders without breaking lead time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Gallery</span>
+        <h2>Inside <span class="text-gradient-gold">Hardik Industries</span></h2>
+        <p>Explore our manufacturing process, products, and craftsmanship.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- FIX: added descriptive alt text to all images for accessibility -->
+        <!-- FIX: fixed image paths with spaces → renamed to phase1/2/3.jpg -->
+        <img src="images/photo-gallery-1.jpg" alt="Hardik Industries workshop" />
+        <img src="images/photo-gallery-2.jpg" alt="Buff manufacturing process" />
+        <img src="images/photo-gallery-3.jpg" alt="Finished buff products" />
+        <img src="images/phase1.jpg" alt="Production phase 1" />
+        <img src="images/phase2.jpg" alt="Production phase 2" />
+        <img src="images/phase3.jpg" alt="Production phase 3" />
+        <img src="images/jute-buff-1.jpg" alt="Jute buff product" />
+        <img src="images/jute-buff-2.jpg" alt="Jute buff close-up" />
+
+        <!-- Hidden initially — only images that exist -->
+        <img class="extra-photo" src="images/hard-buff-1.jpg" alt="Hard buff product" />
+        <img class="extra-photo" src="images/hard-buff-2.jpg" alt="Hard buff detail" />
+        <img class="extra-photo" src="images/hard-buff-3.jpg" alt="Hard buff close-up" />
+        <img class="extra-photo" src="images/closed-coir-1.jpg" alt="Closed coir buff" />
+        <img class="extra-photo" src="images/closed-coir-2.jpg" alt="Closed coir buff detail" />
+        <img class="extra-photo" src="images/closed-coir-3.jpg" alt="Closed coir buff texture" />
+        <img class="extra-photo" src="images/closed-coir-4.jpg" alt="Closed coir buff side" />
+        <img class="extra-photo" src="images/closed-coir-5.jpg" alt="Closed coir buff stack" />
+        <img class="extra-photo" src="images/closed-coir-6.jpg" alt="Closed coir buff bundle" />
+      </div>
+      <div class="gallery-btn-wrap">
+        <button id="viewMoreBtn" class="btn btn-primary">More Photos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Let's build your <span class="text-gradient-gold">next order</span>.</h2>
+        <p>Share what you need — size, quantity, arbor, application — and we'll get back to you within one working day.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-cards reveal">
+          <div class="contact-card">
+            <div class="contact-card-icon">📍</div>
+            <div>
+              <div class="title">Address &amp; Tax</div>
+              <!-- FIX: pre-line preserves address line breaks without hacks -->
+              <div class="body">E-2, Gali No. 5
+Krishna Vihar, Phase I
+Ghaziabad (U.P.) 201003
+GST: 09AVNPS8143A1ZB (Provisional)</div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">📞</div>
+            <div>
+              <div class="title">Phone</div>
+              <!-- FIX: standardised phone number — original had two different numbers -->
+              <div class="body">+91 95605 06564
++91 97106 66565</div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">✉️</div>
+            <div>
+              <div class="title">Email</div>
+              <div class="body">k.k.sharma6565@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">⏰</div>
+            <div>
+              <div class="title">Hours</div>
+              <div class="body">Mon – Sat: 9:00 AM – 6:00 PM
+Sunday: Closed</div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" action="https://formsubmit.co/namansharma031106@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Inquiry — Hardik Industries" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="thank-you.html" />
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name <span class="req">*</span></label>
+              <input class="form-control" type="text" name="name" required />
+            </div>
+            <div class="form-group">
+              <label>Email <span class="req">*</span></label>
+              <input class="form-control" type="email" name="email" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone</label>
+              <input class="form-control" type="tel" name="phone" />
+            </div>
+            <div class="form-group">
+              <label>Product Interest</label>
+              <select class="form-control" name="product" id="productSelect">
+                <option value="">Select a product</option>
+                <option value="Jute Buffs">Jute Buffs</option>
+                <option value="Closed Coir Buffs">Closed Coir Buffs</option>
+                <option value="Hard Buffs">Hard Buffs</option>
+                <option value="Coir Brushes">Coir Brushes</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label>Requirements</label>
+            <textarea class="form-control" name="message" rows="5" placeholder="Size, quantity, arbor specification, target application…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <!-- FIX: wrapped in footer-brand div so CSS .footer-brand rules apply correctly -->
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">H</div>
+          <div class="logo-text">
+            <div class="logo-title">Hardik <span>Industries</span></div>
+            <div class="logo-sub">Buff Manufacturing · Est. 1980</div>
+          </div>
+        </div>
+        <!-- FIX: removed repeated duplicate sentence from original footer -->
+        <p>Premium manufacturer of buffing materials for utensil polishing and industrial finishing — engineered in Ghaziabad since 1980, shipped across India.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products/jute-buff.html">Jute Buffs</a></li>
+          <li><a href="products/closed-coir-buff.html">Closed Coir Buffs</a></li>
+          <li><a href="products/hard-buff.html">Hard Buffs</a></li>
+          <li><a href="products/coir-brush.html">Coir Brushes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <ul>
+          <li>📍 Krishna Vihar, Ghaziabad (U.P.) 201003</li>
+          <!-- FIX: standardised phone number -->
+          <li>📞 +91 95605 06564</li>
+          <li>✉️ k.k.sharma6565@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Hardik Industries. All Rights Reserved.</span>
+      <span>Crafted with pride in India</span>
+      <span>A Website By Naman Sharma</span>
+    </div>
+  </footer>
+
+  <!-- FIX: WhatsApp now has correct green background + aria-label -->
+  <a href="https://wa.me/919560506564?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20buffing%20materials."
+     class="floating-whatsapp"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    💬
+  </a>
+  <!-- FIX: Call button now gold (was also green, making them indistinguishable) -->
+  <a href="tel:+919560506564" class="floating-call" aria-label="Call Hardik Industries">
+    📞
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hardik Industries — Loading</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #e9d9b8;
+    --cream-light: #f3e8cf;
+    --bg: #ffffff;
+    --ink: #1a1a1a;
+  }
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  html,body{
+    height:100%;
+    width:100%;
+    background:var(--bg);
+    overflow:hidden;
+  }
+
+  body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cinzel', serif;
+    position:relative;
+  }
+
+  .loader-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:2rem;
+    animation: fadeIn 1.4s ease-out;
+  }
+
+  .brand-title{
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    letter-spacing:0.05em;
+    font-size:clamp(2.2rem, 8vw, 6.5rem);
+    line-height:1;
+    color: var(--cream);
+    -webkit-text-stroke: 1px rgba(180,150,100,0.25);
+    text-shadow:
+      0 1px 0 rgba(255,255,255,0.9),
+      2px 3px 0 rgba(210,190,150,0.35),
+      4px 6px 10px rgba(180,150,100,0.25);
+    position:relative;
+    white-space:nowrap;
+    animation: shimmer 4s ease-in-out infinite;
+    background: linear-gradient(120deg, #e9d9b8 0%, #f8f0dc 25%, #e0c99a 50%, #f8f0dc 75%, #e9d9b8 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .brand-subtitle{
+    font-family:'Alex Brush', cursive;
+    font-size:clamp(1.3rem, 3.5vw, 2.2rem);
+    color: var(--ink);
+    margin-top:0.3rem;
+    letter-spacing:0.02em;
+    opacity:0;
+    animation: fadeInUp 1.2s ease-out 0.5s forwards;
+  }
+
+  .loading-bar-container{
+    margin-top:3rem;
+    width: min(320px, 60vw);
+    height:2px;
+    background: rgba(200,180,140,0.25);
+    position:relative;
+    overflow:hidden;
+    border-radius:2px;
+  }
+
+  .loading-bar-fill{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:0%;
+    background: linear-gradient(90deg, #d8bd8a, #f3e8cf, #d8bd8a);
+    border-radius:2px;
+    transition: width 0.25s ease-out;
+  }
+
+  .loading-info{
+    margin-top:1rem;
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+    font-family:'Cinzel', serif;
+    font-size:0.7rem;
+    letter-spacing:0.35em;
+    color:#b8a06a;
+    text-transform:uppercase;
+    opacity:0;
+    animation: fadeIn 1s ease-out 0.9s forwards;
+  }
+
+  .loading-percent{
+    font-variant-numeric: tabular-nums;
+    min-width:2.6em;
+    text-align:left;
+  }
+
+  .divider-line{
+    width:1px;
+    height:10px;
+    background:#c9b585;
+  }
+
+  @keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+  }
+
+  @keyframes fadeInUp{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  @keyframes shimmer{
+    0%{background-position: 0% center;}
+    50%{background-position: 100% center;}
+    100%{background-position: 0% center;}
+  }
+
+  .page-fade-out{
+    animation: pageOut 0.9s ease forwards;
+  }
+
+  @keyframes pageOut{
+    to{opacity:0; visibility:hidden;}
+  }
+
+  /* Content that appears after loading completes */
+  .site-content{
+    position:fixed;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+    background:var(--bg);
+    opacity:0;
+    pointer-events:none;
+    transition: opacity 1s ease;
+    padding:2rem;
+  }
+
+  .site-content.show{
+    opacity:1;
+    pointer-events:auto;
+  }
+
+  .site-content h1{
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    letter-spacing:0.05em;
+    font-size:clamp(2rem, 6vw, 4rem);
+    color:#3a3a3a;
+  }
+
+  .site-content p.script{
+    font-family:'Alex Brush', cursive;
+    font-size:clamp(1.2rem, 3vw, 1.8rem);
+    color:#1a1a1a;
+    margin-top:0.5rem;
+  }
+
+  .site-content .tag{
+    margin-top:2rem;
+    font-size:0.75rem;
+    letter-spacing:0.3em;
+    color:#b8a06a;
+    text-transform:uppercase;
+  }
+
+  .corner-mark{
+    position:fixed;
+    font-family:'Cinzel', serif;
+    font-size:0.65rem;
+    letter-spacing:0.25em;
+    color:#cbb98a;
+    text-transform:uppercase;
+    opacity:0.8;
+  }
+  .corner-mark.tl{ top:2rem; left:2rem; }
+  .corner-mark.br{ bottom:2rem; right:2rem; }
+</style>
+</head>
+<body>
+
+  <span class="corner-mark tl">Est. Quality</span>
+  <span class="corner-mark br">Since Origin</span>
+
+  <div class="loader-wrap" id="loaderWrap">
+    <div class="brand-title">HARDIK INDUSTRIES</div>
+    <div class="brand-subtitle">Buff Manufacturer</div>
+
+    <div class="loading-bar-container">
+      <div class="loading-bar-fill" id="loadingBarFill"></div>
+    </div>
+
+    <div class="loading-info">
+      <span>Loading</span>
+      <span class="divider-line"></span>
+      <span class="loading-percent" id="loadingPercent">0%</span>
+    </div>
+  </div>
+
+  
+
+<script>
+  const fill = document.getElementById('loadingBarFill');
+  const percentLabel = document.getElementById('loadingPercent');
+  const loaderWrap = document.getElementById('loaderWrap');
+  const siteContent = document.getElementById('siteContent');
+
+  let progress = 0;
+
+  function tick(){
+    // ease towards 100 with slight randomness for a natural feel
+    const remaining = 100 - progress;
+    const increment = Math.max(0.4, remaining * 0.06 * Math.random() + 0.3);
+    progress = Math.min(100, progress + increment);
+
+    fill.style.width = progress + '%';
+    percentLabel.textContent = Math.floor(progress) + '%';
+
+    if(progress < 100){
+      requestAnimationFrame(() => setTimeout(tick, 30));
+    } else {
+      setTimeout(finishLoading, 400);
+    }
+  }
+
+  function finishLoading() {
+    loaderWrap.classList.add('page-fade-out');
+
+    setTimeout(() => {
+        window.location.href = "home.html";
+    }, 900);
+}
+
+  window.addEventListener('load', () => {
+    setTimeout(tick, 300);
+  });
+</script>
+
+</body>
+</html>
